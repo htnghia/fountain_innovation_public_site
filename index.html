@@ -3,21 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DollarPal</title>
+    <title>Your App Name - Support</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
-        .container { background: white; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #007AFF; }
-        a { display: block; margin: 10px 0; color: #007AFF; text-decoration: none; font-weight: bold; }
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #007AFF, #00C6FF);
+            text-align: center;
+            color: white;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #FFD700;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background-color: #FFC107;
+        }
+
+        /* Screenshot Slider */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+            overflow: hidden;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background: #fff;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .prev:hover, .next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>Your App Name</h1>
-        <p>Support Email: <a href="mailto:support@yourapp.com">support@yourapp.com</a></p>
-        <p><a href="https://apps.apple.com/app/idYOUR_APP_ID">Download on the App Store</a></p>
+
+        <!-- Screenshot Slider -->
+        <div class="slider-container">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="slider">
+                <img src="screenshot1.jpg" alt="App Screenshot 1">
+                <img src="screenshot2.jpg" alt="App Screenshot 2">
+                <img src="screenshot3.jpg" alt="App Screenshot 3">
+                <img src="screenshot4.jpg" alt="App Screenshot 4">
+                <img src="screenshot5.jpg" alt="App Screenshot 5">
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <p>Need help? Contact us:</p>
+        <p><a href="mailto:support@yourapp.com">support@yourapp.com</a></p>
+        <a href="https://apps.apple.com/app/idYOUR_APP_ID">Download on the App Store</a>
     </div>
+
+    <script>
+        let currentIndex = 0;
+        function moveSlide(direction) {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slider img');
+            const totalSlides = slides.length;
+
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = totalSlides - 1;
+            if (currentIndex >= totalSlides) currentIndex = 0;
+
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
 
 </body>
 </html>
