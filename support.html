@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Support - Your App Name</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f4f4f4; }
+        header { background-color: #007AFF; color: white; padding: 15px 0; font-size: 24px; }
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        a { color: #007AFF; text-decoration: none; font-weight: bold; }
+        .button { display: inline-block; padding: 10px 20px; margin-top: 10px; background: #007AFF; color: white; border-radius: 5px; text-decoration: none; }
+        form { display: flex; flex-direction: column; gap: 10px; }
+        input, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #007AFF; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <header>App Support - Your App Name</header>
+
+    <div class="container">
+        <h2>Welcome to Your App Support</h2>
+        <p>Need help? Feel free to contact us.</p>
+        
+        <h3>App Store Link</h3>
+        <a href="https://apps.apple.com/app/idYOUR_APP_ID" class="button">View on App Store</a>
+
+        <h3>Frequently Asked Questions</h3>
+        <p>Visit our <a href="#">FAQ page</a> for common issues and solutions.</p>
+
+        <h3>Contact Us</h3>
+        <form action="mailto:support@yourapp.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <h3>Privacy Policy</h3>
+        <p>Read our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </div>
+
+</body>
+</html>
