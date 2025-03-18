@@ -1,141 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your App Name - Support</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #007AFF, #00C6FF);
-            text-align: center;
-            color: white;
-        }
-        
-        .container {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            max-width: 450px;
-            width: 90%;
-        }
-
-        h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        a {
-            display: inline-block;
-            padding: 12px 20px;
-            text-decoration: none;
-            color: white;
-            background-color: #FFD700;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            background-color: #FFC107;
-        }
-
-        /* Screenshot Slider */
-        .slider-container {
-            position: relative;
-            width: 100%;
-            max-width: 350px;
-            overflow: hidden;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            background: #fff;
-        }
-
-        .slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slider img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 12px;
-            cursor: pointer;
-            border-radius: 50%;
-            font-size: 20px;
-            transition: 0.3s;
-        }
-
-        .prev:hover, .next:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        .prev { left: 10px; }
-        .next { right: 10px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DollarPal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>DollarPal</h1>
+  </header>
+  <main>
+    <section id="features">
+      <h2>Welcome to DollarPal</h2>
+      <p>DollarPal is a simple and intuitive tool to help you plan and track your finances.
+    </p>
+    <p>Here are some of the key features:
 
-    <div class="container">
-        <h1>Your App Name</h1>
-
-        <!-- Screenshot Slider -->
-        <div class="slider-container">
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <div class="slider">
-                <img src="screenshot1.jpg" alt="App Screenshot 1">
-                <img src="screenshot2.jpg" alt="App Screenshot 2">
-                <img src="screenshot3.jpg" alt="App Screenshot 3">
-                <img src="screenshot4.jpg" alt="App Screenshot 4">
-                <img src="screenshot5.jpg" alt="App Screenshot 5">
-            </div>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
-        </div>
-
-        <p>Need help? Contact us:</p>
-        <p><a href="mailto:support@yourapp.com">support@yourapp.com</a></p>
-        <a href="https://apps.apple.com/app/idYOUR_APP_ID">Download on the App Store</a>
-    </div>
-
-    <script>
-        let currentIndex = 0;
-        function moveSlide(direction) {
-            const slider = document.querySelector('.slider');
-            const slides = document.querySelectorAll('.slider img');
-            const totalSlides = slides.length;
-
-            currentIndex += direction;
-            if (currentIndex < 0) currentIndex = totalSlides - 1;
-            if (currentIndex >= totalSlides) currentIndex = 0;
-
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-    </script>
-
+  </p>
+      <ul>
+        <li>Plan and track income, expenses, and wealth on a monthly, weekly, or custom period basis.</li>
+        <li>Get a clear view of how your wealth grows over time.</li>
+        <li>Access detailed charts for an overview of your plans. If you prefer precise numbers, a table format is also available.</li>
+        <li>Use free calculation sheets for drafts or specific tracking needs, such as debt, loans, or travel expenses.</li>
+        <li>Customize your preferred date and number format.</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:htnghia2409@gmail.com">htnghia2409@gmail.com</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/htnghia2409" target="_blank">htnghia2409</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 DollarPal. All rights reserved.</p>
+  </footer>
 </body>
 </html>
